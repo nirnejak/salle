@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>Add Your PG, Hostel or Flat</title>
+<link rel="stylesheet" type="text/css" href="css/filter_style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="icon" href="icon.png">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+
+<link rel="stylesheet" href="css/material.min.css">
+<link rel="stylesheet" href="css/logo.css">
+<script defer src="js/material.min.js"></script>
+<style>
+.logo {
+font-family: logo;
+}
+</style>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body style="margin:0;">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title" style="margin-bottom:5px;"><h2 class="logo">Salle</h2></span>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title"><h3 class="logo">Salle</h3></span>
+	<nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html" style="text-decoration:none;">Home</a>
+      <a class="mdl-navigation__link" href="filter.html" style="text-decoration:none;">Find PG</a>
+      <a class="mdl-navigation__link" href="#" style="text-decoration:none;">Add Yourself</a>
+      <a class="mdl-navigation__link" href="contact_us.html" style="text-decoration:none;">Contact US</a>
+      <a class="mdl-navigation__link" href="about_us.html" style="text-decoration:none;">About Us</a>
+    </nav>
+
+
+  </div>
+  <main class="mdl-layout__content">
+	<div class="page-content">
+    <h2 style="margin:20;">Add Yourself</h2>
+    <hr color="black" noshade>
+    <h3 style="margin:15;">How to add Your PG, Hostel or Flat on Salle</h3>
+    <h6 style="margin-left:15;">
+      Adding you PG, Hostel or Flat on Salle is very easy. Just Fill the form below and we'll come to you for verification. In a day or two your PG, Hostel or Flat will be added on Salle. That's it.
+    </h6>
+    <br>
+    <center>
+    <form action="add.php" method="post">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="name" name="Owner_Name">
+        <label class="mdl-textfield__label" for="name">Your Name</label>
+      </div>
+      <br>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="name_pg" name="PG_Name">
+        <label class="mdl-textfield__label" for="name_pg">Name of PG or Flat</label>
+      </div>
+      <br>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="contact_number" name="Phone_Num">
+        <label class="mdl-textfield__label" for="contact_number">Contact Number</label>
+      </div>
+      <br>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" name="rent">
+        <label class="mdl-textfield__label" for="price">Price(Per Month)</label>
+      </div>
+      <table cellpadding="0" cellspacing="0" border="0"><tr><td>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="elec_price" id="filter_opt">
+        <input type="checkbox"  id="elec_price" class="mdl-checkbox__input" name="Electricity"><span class="mdl-checkbox__label">Electricity not included </span>
+      </label></td></tr></table>
+      <br>
+      <div class="mdl-textfield mdl-js-textfield">
+        <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" name="Address"></textarea>
+        <label class="mdl-textfield__label" for="address">Address</label>
+      </div>
+      <br>
+      <div style="align:left;">
+      <center>
+      <table cellpadding="0" cellspacing="0" border="0"><tr><td> <!-- Main Table  -->
+      <h5>&nbsp;&nbsp;For : </h5>
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_boy" id="filter_opt_for">    
+        <input type="radio" id="for_boy" class="mdl-radio__button" value="Boys" name="accom" checked><span class="mdl-radio__label">Boys</span>
+      </label>
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_girls" id="filter_opt_for">
+        <input type="radio" id="for_girls" class="mdl-radio__button" value="Girls" name="accom"><span class="mdl-radio__label">Girls</span>
+      </label>
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_family" id="filter_opt_for">
+        <input type="radio" id="for_family" class="mdl-radio__button"value="Family" name="accom"><span class="mdl-radio__label">Family</span>
+      </label>
+
+      <h5>&nbsp;&nbsp;Type : </h5>
+      <table><tr>
+    <td>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="type_pg" id="filter_opt">
+        <input type="checkbox"  id="type_pg" class="mdl-checkbox__input" value="PG" name="type" checked><span class="mdl-checkbox__label">PG </span>
+      </label>
+    </td>
+    <td>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="type_flat" id="filter_opt">
+        <input type="checkbox"  id="type_flat" class="mdl-checkbox__input" value="Flat" name="type"><span class="mdl-checkbox__label">Flat </span>
+      </label>
+    </td>
+      </tr></table>
+
+      <h5>&nbsp;&nbsp;Facilities : </h5>
+      <table border="0"><tr>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_ac" id="filter_opt">
+      <input type="checkbox"  id="faci_ac" class="mdl-checkbox__input" name="faci_ac"><span class="mdl-checkbox__label">AC </span>
+    </label>
+    </td>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_tv" id="filter_opt">
+      <input type="checkbox"  id="faci_tv" class="mdl-checkbox__input" name="faci_tv"><span class="mdl-checkbox__label">TV </span>
+    </label>
+    </td>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_bed" id="filter_opt">
+      <input type="checkbox"  id="faci_bed" class="mdl-checkbox__input" name="faci_bed"><span class="mdl-checkbox__label">Bed </span>
+    </label>
+    </td>
+    <tr>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_wifi" id="filter_opt">
+      <input type="checkbox"  id="faci_wifi" class="mdl-checkbox__input" name="faci_wifi"><span class="mdl-checkbox__label">Wi-Fi </span>
+    </label>
+    </td>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_food" id="filter_opt">
+      <input type="checkbox"  id="faci_food" class="mdl-checkbox__input" name="faci_food"><span class="mdl-checkbox__label">Food </span>
+    </label>
+    </td>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_cooler" id="filter_opt">
+      <input type="checkbox"  id="faci_cooler" class="mdl-checkbox__input" name="faci_cooler"><span class="mdl-checkbox__label">Room Cooler </span>
+    </label>  
+    </td>
+    <tr>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_wcooler" id="filter_opt">
+      <input type="checkbox"  id="faci_wcooler" class="mdl-checkbox__input" name="faci_wcooler"><span class="mdl-checkbox__label">Water Cooler </span>
+    </label>
+    </td>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_wpurifier" id="filter_opt">
+      <input type="checkbox"  id="faci_wpurifier" class="mdl-checkbox__input" name="faci_wpurifier"><span class="mdl-checkbox__label">Water Purifier </span>
+    </label>
+    </td>
+    <td>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_bathroom" id="filter_opt">
+      <input type="checkbox"  id="faci_bathroom" class="mdl-checkbox__input" name="faci_bathroom"><span class="mdl-checkbox__label">Attached Bathroom </span>
+    </label>
+    </td>
+  </tr></table>
+      <br>
+
+    </td></tr></table>  <!-- End of Main Table  -->
+      <br><br>
+      <center>
+      <button class="mdl-button mdl-button--raised mdl-button--accent mdl-js-button mdl-js-ripple-effect">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+      <br><br>
+      </form>
+      </center>
+    </div>
+  </main>
+  <footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="index.html">Home</a</li>
+      <li><a href="#">Add Yourself</a></li>
+      <li><a href="contact_us.html">Contact US</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+    </ul>
+  </footer>
+</div>
+
+</body>
+</html>

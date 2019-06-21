@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Look for PG</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="icon" href="icon.png">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+
+<link rel="stylesheet" href="css/material.min.css">
+<link rel="stylesheet" href="css/logo.css">
+<script defer src="js/material.min.js"></script>
+<style>
+.logo {
+font-family: logo;
+}
+</style>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<link rel="stylesheet" type="text/css" href="css/filter_style.css">
+</head>
+<body style="margin:0;">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title" style="margin-bottom:5px;"><h2 class="logo">Salle</h2></span>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Filter</span>
+    <form method="post" target="iframe" action="filter_results.php">
+		<h5>&nbsp;&nbsp;For : </h5>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_boy" id="filter_opt_for">		
+			<input type="radio" id="for_boy" class="mdl-radio__button" value="Boys" name="accom" checked><span class="mdl-radio__label">Boys</span>
+		</label><br>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_girls" id="filter_opt_for">
+			<input type="radio" id="for_girls" class="mdl-radio__button" value="Girls" name="accom"><span class="mdl-radio__label">Girls</span>
+		</label><br>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_family" id="filter_opt_for">
+        	<input type="radio" id="for_family" class="mdl-radio__button" value="Family" name="accom"><span class="mdl-radio__label">Family</span>
+      	</label>
+
+		<h5>&nbsp;&nbsp;City : </h5>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="city_raipur" id="filter_opt">
+			<input type="checkbox"  id="city_raipur" class="mdl-checkbox__input" name="city" value="Raipur"checked><span class="mdl-checkbox__label">Raipur </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="city_bhilai" id="filter_opt">
+			<input type="checkbox"  id="city_bhilai" class="mdl-checkbox__input" name="city"  value="Bhilai" disabled><span class="mdl-checkbox__label">Bhilai (Coming Soon)</span>
+		</label>
+
+		<h5>&nbsp;&nbsp;Type : </h5>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_pg" id="filter_opt_for">
+        	<input type="radio" id="for_pg" class="mdl-radio__button" value="PG" name="type" checked><span class="mdl-radio__label" >PG</span>
+      	</label><br>
+      	<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="for_flat" id="filter_opt_for">
+        	<input type="radio" id="for_flat" class="mdl-radio__button" value="Flat" name="type"><span class="mdl-radio__label">Flat</span>
+      	</label>
+
+
+		<h5>&nbsp;&nbsp;Price: </h5>
+		<h6>&nbsp;&nbsp;min</h6>
+		<input class="mdl-slider mdl-js-slider" type="range" min="1500" max="20000" value="4000" tabindex="0" step="100" name="min" onchange="showValue1(this.value)">
+		<center><span id="range_1">4000</span></center><br>
+		<h6>&nbsp;&nbsp;max</h6><br>
+		<input class="mdl-slider mdl-js-slider" type="range" min="1500" max="20000" value="15000" tabindex="0" step="100" name="max" onchange="showValue2(this.value)">
+		<center><span id="range_2">15000</span></center>
+		<script type="text/javascript">
+		function showValue1 (newValue) {
+			document.getElementById("range_1").innerHTML=newValue;
+			// body...
+		}
+		function showValue2 (newValue) {
+			document.getElementById("range_2").innerHTML=newValue;
+			// body...
+		}
+		</script>
+
+		<h5>&nbsp;&nbsp;Facilities : </h5>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_ac" id="filter_opt">
+			<input type="checkbox"  id="faci_ac" class="mdl-checkbox__input" name="faci_ac" value="1"><span class="mdl-checkbox__label">AC </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_tv" id="filter_opt">
+			<input type="checkbox"  id="faci_tv" class="mdl-checkbox__input" name="faci_tv" value="1"><span class="mdl-checkbox__label">TV </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_bed" id="filter_opt">
+			<input type="checkbox"  id="faci_bed" class="mdl-checkbox__input" name="faci_bed" value="1"><span class="mdl-checkbox__label">Bed </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_wifi" id="filter_opt">
+			<input type="checkbox"  id="faci_wifi" class="mdl-checkbox__input" name="faci_wifi" value="1"><span class="mdl-checkbox__label">Wi-Fi </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_food" id="filter_opt">
+			<input type="checkbox"  id="faci_food" class="mdl-checkbox__input" name="faci_food" value="1"><span class="mdl-checkbox__label">Food </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_cooler" id="filter_opt">
+			<input type="checkbox"  id="faci_cooler" class="mdl-checkbox__input" name="faci_cooler" value="1"><span class="mdl-checkbox__label">Room Cooler </span>
+		</label>		
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_wcooler" id="filter_opt">
+			<input type="checkbox"  id="faci_wcooler" class="mdl-checkbox__input" name="faci_wcooler" value="1"><span class="mdl-checkbox__label">Water Cooler </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_wpurifier" id="filter_opt">
+			<input type="checkbox"  id="faci_wpurifier" class="mdl-checkbox__input" name="faci_wpurifier" value="1"><span class="mdl-checkbox__label">Water Purifier </span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="faci_bathroom" id="filter_opt">
+			<input type="checkbox"  id="faci_bathroom" class="mdl-checkbox__input" name="faci_bathroom" value="1"><span class="mdl-checkbox__label">Attached Bathroom </span>
+		</label>
+		<br><br>
+		<center>    
+			<button class="mdl-button mdl-button--raised mdl-button--accent mdl-js-button mdl-js-ripple-effect" type="submit" value="submit" name="submit">Filter</button>
+			<br><br>
+		</center>
+	</form>
+  </div>
+  <main class="mdl-layout__content">
+	<div class="page-content">
+		<iframe src="all_filter_results.php" width="100%" height="100%" style="margin:0;" name="iframe"></iframe>
+    </div>
+  </main>
+ <footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="index.html">Home</a</li>
+      <li><a href="add_yourself.html">Add Yourself</a></li>
+      <li><a href="contact_us.html">Contact US</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+    </ul>
+  </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+.card-square.mdl-card {
+  width: 432px;
+  height: 273px;
+}
+.card-square > .mdl-card__title {
+  color: #fff;
+
+}

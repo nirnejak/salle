@@ -1,0 +1,14 @@
+        .mdl-card {
+          border-radius: 10px;
+          background-color: #2196f3;
+        }
+        .mdl-card__title {
+          margin-left: 40px;
+          background-color: white;
+          padding-bottom: 20px;
+        }
+        .mdl-card__supporting-text {
+          margin-left: 40px;
+          background-color: white;
+          padding-bottom: 20px;
+        }
